@@ -2,12 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import FeedScreen from "./screens/FeedScreen";
+import router from "./utils/router";
+import { createAppContainer } from "react-navigation";
+const AppContainer = createAppContainer(router);
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <FeedScreen />
+      <AppContainer />
     </View>
   );
 }
@@ -15,8 +17,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'steelblue',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: "red",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
