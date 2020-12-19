@@ -1,11 +1,15 @@
 import * as expoStatusBar from 'expo-status-bar';
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 
-export default () => {
+export default props => {
   return (
     <View>
       <Text>Feed screen</Text>
+
+      <TouchableOpacity onPress={() => props.navigation.navigate("Search")}>
+        <Text>Search</Text>
+      </TouchableOpacity>
     </View>
   );
 };
