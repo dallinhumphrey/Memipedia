@@ -12,8 +12,8 @@ export default (props: IFeedScreenProps) => {
     <View>
       <Text>Feed screen</Text>
 
-      <TouchableOpacity onPress={() => props.navigation.navigate("Search")}>
-        <Text>Search</Text>
+      <TouchableOpacity onPress={() => props.navigation.navigate("Account")}>
+        <Text>Account</Text>
       </TouchableOpacity>
     </View>
   );
