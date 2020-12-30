@@ -11,12 +11,8 @@ interface IFeedScreenProps{
 }
 export default (props: IFeedScreenProps) => {
   return (
-    <Container>
+    <Container navigate={props.navigation.navigate}>
       <Text>Feed screen</Text>
-
-      <TouchableOpacity onPress={() => props.navigation.navigate("Account")}>
-        <Text>Search</Text>
-      </TouchableOpacity>
     </Container>
   );
 };
