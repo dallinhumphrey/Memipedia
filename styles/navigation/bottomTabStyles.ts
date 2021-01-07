@@ -1,9 +1,10 @@
-import {StyleSheet} from "react-native";
+import { StyleSheet } from "react-native";
+import { primary, highlight } from "../colors";
 
 export default StyleSheet.create({
-    container: {
-        backgroundColor: "steelblue",
-        paddingTop: 15,
-        paddingBottom: 15
-    }
+  container: {
+    backgroundColor: highlight,
+    paddingTop: 15,
+    paddingBottom: 15
+  }
 });

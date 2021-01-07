@@ -8,7 +8,8 @@ interface IBottomTabBarProps {
 }
 
 export default (props: IBottomTabBarProps) => {
-    return <View style={bottomTabStyles.container}>
+    return (
+      <View style={bottomTabStyles.container}>
         <TouchableOpacity onPress={() => props.navigate("Feed")}>
           <Text>Feed</Text>
         </TouchableOpacity>
@@ -22,4 +23,5 @@ export default (props: IBottomTabBarProps) => {
           <Text>Account</Text>
         </TouchableOpacity>
     </View>
-}
+    );
+};
