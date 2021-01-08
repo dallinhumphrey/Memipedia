@@ -1,11 +1,11 @@
 import * as expoStatusBar from 'expo-status-bar';
 import React from "react";
-import {Text, View} from "react-native";
+import { View, Text } from "react-native";
 
 export default () => {
-    return (
-        <View>
-            <Text>Account Screen</Text>
-        </View>
-    );
+  return (
+    <View>
+      <Text>Account screen</Text>
+    </View>
+  );
 };
