@@ -1,11 +1,13 @@
 import React from "react";
 import { createAppContainer, createSwitchNavigator } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+import { createStackNavigator, HeaderTitle } from "react-navigation-stack";
 
 import FeedScreen from "../screens/FeedScreen";
 import SearchScreen from "../screens/SearchScreen";
 import AccountScreen from "../screens/AccountScreen";
 import PostFormScreen from "../screens/PostFormScreen";
+
+import HeaderLogo from "../components/images/HeaderLogo";
 
 import {dark} from "../styles/colors";
 
@@ -23,7 +25,8 @@ const AppStack = createStackNavigator(
       headerStyle: {
         backgroundColor: dark
       },
-      headerTintColor: "#fff"
+      headerTintColor: "#fff",
+      headerTitle: () => <HeaderLogo />
     } 
   }
 );
