@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {View, Text, TouchableOpacity} from "react-native";
+import {View, Text, TouchableOpacity, TextInput} from "react-native";
 
 export default () => {
     const [formToShow, setFormToShow] = useState("LOGIN");
@@ -31,6 +31,12 @@ export default () => {
     return (
         <View style={{ marginTop: 100 }}>
             <Text>{headerText()}</Text>
+
+            <View style={{marginTop: 20, marginBottom: 20}}>
+                <TextInput
+                value={"Something: "} onChangeText={val => console.log(val)}
+                />
+            </View>
 
             <TouchableOpacity onPress={handleAuthTypePress}>
                 <Text>{screenTypeText()}</Text>
