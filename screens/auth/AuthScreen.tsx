@@ -3,6 +3,7 @@ import {View, Text, TouchableOpacity, TextInput} from "react-native";
 
 export default () => {
     const [formToShow, setFormToShow] = useState("LOGIN");
+    const [email, setEmail] = useState("")
 
     const screenTypeText = () => {
         if (formToShow === "LOGIN") {
@@ -33,8 +34,7 @@ export default () => {
             <Text>{headerText()}</Text>
 
             <View style={{marginTop: 20, marginBottom: 20}}>
-                <TextInput
-                value={"Something: "} onChangeText={val => console.log(val)}
+                <TextInput placeholder="Email" value={email} onChangeText={val => setEmail(val)}
                 />
             </View>
 
