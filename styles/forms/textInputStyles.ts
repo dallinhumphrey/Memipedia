@@ -3,7 +3,7 @@ import { dark } from "../colors";
 
 export default StyleSheet.create({
     textFieldWrapper: {
-        marginTop: 100, 
+        marginTop: 20, 
         marginBottom: 20
     },
     textField: {

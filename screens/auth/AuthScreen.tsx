@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import {View, Text, TouchableOpacity, TextInput} from "react-native";
 
-import textInputStyles from "../../styles/forms/textImputStyles";
+import textInputStyles from "../../styles/forms/textInputStyles";
+const {textFieldWrapper, textField} = textInputStyles;
 import authScreenStyles from "../../styles/stacks/auth/authScreenStyles";
+const {container} = authScreenStyles
 
 export default () => {
     const [formToShow, setFormToShow] = useState("LOGIN");
@@ -35,26 +37,26 @@ export default () => {
     }
 
     return (
-        <View style={authScreenStyles.container}>
+        <View style={container}>
             <Text style={{color: "white"}}>{headerText()}</Text>
 
-            <View style={textInputStyles.textFieldWrapper}>
+            <View style={textFieldWrapper}>
                 <TextInput 
                 placeholder="Email" 
                 value={email} 
                 onChangeText={val => setEmail(val)}
-                style={textInputStyles.textField}
+                style={textField}
                 autoCapitalize="none"
                 spellCheck={false}
                 />
             </View>
 
-            <View style={textInputStyles.textFieldWrapper}>
+            <View style={textFieldWrapper}>
                 <TextInput
                 placeholder="Password"
                 value={password}
                 onChangeText={val => setPassword(val)}
-                style={textInputStyles.textField}
+                style={textField}
                 secureTextEntry={true}
                 />
             </View>
