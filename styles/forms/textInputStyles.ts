@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import { dark } from "../colors";
 
 export default StyleSheet.create({
     textFieldWrapper: {
